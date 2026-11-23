@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#181128">
+    <meta name="description" content="Joue à CHIBI CHAOS, ton royaume suspendu dans les étoiles.">
+    <title>CHIBI CHAOS</title>
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="top">
+        <div class="brand"><span class="crest" aria-hidden="true">♛</span><strong>CHIBI <em>CHAOS</em></strong></div>
+        <ul id="wallet" class="wallet" aria-label="Réserve du royaume"></ul>
+      </header>
+      <main class="game-layout">
+        <nav class="buildings" aria-label="Bâtiments du royaume">
+          <h2>Royaume</h2>
+          <div id="buildings"></div>
+        </nav>
+        <section class="map" aria-label="Carte de l’île des Miettes">
+          <div id="viewport" class="viewport"></div>
+          <div class="map-title"><h1>L’île des Miettes</h1><p id="map-hint">Glisse pour explorer</p></div>
+          <div class="camera" aria-label="Caméra">
+            <button id="zoom-out" aria-label="Dézoomer">−</button>
+            <button id="zoom-in" aria-label="Zoomer">+</button>
+            <button id="center" aria-label="Recentrer la carte">⌖</button>
+          </div>
+        </section>
+        <aside class="sheet" aria-label="Bâtiment sélectionné">
+          <div class="sheet-header">
+            <span id="building-icon" class="building-icon" aria-hidden="true"></span>
+            <div><h2 id="name"></h2><p id="role"></p></div>
+            <span id="level" class="level"></span>
+          </div>
+          <div id="stats" class="stats"></div>
+          <div class="upgrade-info">
+            <h3><span>Amélioration</span><span id="time"></span></h3>
+            <ul id="cost"></ul>
+            <p id="reason"></p>
+          </div>
+          <div class="actions">
+            <button id="move">Déplacer</button>
+            <button id="harvest">Récolter</button>
+            <button id="upgrade" class="gold-button">Améliorer</button>
+          </div>
+          <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
